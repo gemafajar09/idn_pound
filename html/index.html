@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <script src="./index.js"></script>
+
+    <div id="body" style="display:none" class="container mx-auto mt-[10%] w-[40%]">
+        <div class="rounded-lg bg-white border border-gray-200 p-4 shadow-lg">
+            <div class="flex items-center">
+                <div>
+                    <img class="w-24"
+                        src="https://cdn.discordapp.com/attachments/1065772031498534982/1119764677304528926/IDN_NEW.png"
+                        alt="" />
+                </div>
+                <div class="w-full text-center">
+                    <p class="text-center text-lg font-bold text-gray-500">Surat Penyitaan Kendaraan</p>
+                </div>
+            </div>
+            <div class="border-b-1 m-2 border"></div>
+            <div class="grid grid-cols-3 gap-3">
+                <div class="m-2">
+                    <label for="">Tanggal Penyitaan</label>
+                    <input type="date" readonly class="mt-3 w-full rounded border border-gray-300 p-2" id="tglMasuk" />
+                </div>
+                <div class="m-2">
+                    <label for="">Tanggal Keluar</label>
+                    <input type="date" class="mt-3 w-full rounded border border-gray-300 p-2" id="tglKeluar" />
+                </div>
+                <div class="m-2">
+                    <label for="">Denda</label>
+                    <input type="number" class="mt-3 w-full rounded border border-gray-300 p-2" id="denda" />
+                </div>
+            </div>
+            <div class="m-2">
+                <label for="">Pelanggaran</label>
+                <textarea type="text" class="mt-3 w-full rounded border border-gray-300 p-2" id="catatan"></textarea>
+            </div>
+            <div class="flex items-center justify-end">
+                <button type="button" onclick="sitakendaraan()"
+                    class="bg-blue-400 text-white p-2 w-1/3 rounded-lg hover:bg-blue-600">Sita</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="pound" style="display:none" class="container mx-auto mt-[10%] w-[80%] bg-white">
+        <div class="rounded-lg border border-gray-200 p-4 shadow-lg">
+            <div class="flex items-center">
+                <div>
+                    <img class="w-24"
+                        src="https://cdn.discordapp.com/attachments/1065772031498534982/1119764677304528926/IDN_NEW.png"
+                        alt="" />
+                </div>
+                <div class="w-full text-center">
+                    <p class="text-center text-lg font-bold text-gray-500">Data Kendaraan Tersita</p>
+                </div>
+            </div>
+            <div class="border-b-1 m-2 border"></div>
+            <div class="grid grid-cols-4 gap-2" id="isidata">
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
